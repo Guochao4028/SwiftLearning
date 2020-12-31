@@ -101,9 +101,110 @@ import Foundation
 //let str: String? = nil
 //let count = str!.count
 
-let str: String! = ""
-let count = str.count
+//let str: String! = ""
+//let count = str.count 
 
+/*  optional 实现原理 */
+/**
+ Optional<String> == String?
+ unsafelyUnwrapped.count = String!.count
+ */
+
+//let str: Optional<String> = ""
+//let count = str.unsafelyUnwrapped.count
+//if let a = str {
+//    let aCount = a.count
+//    print(aCount)
+//}
+
+//
+//let empStr = ""
+//let emStrig = String()
+//if empStr.isEmpty {
+//    print("isEmpty")
+//}
+
+//
+//let str = #"1#\n2\n"#
+//print(str)
+
+//var a = "hi"
+//var a1 = a
+//print(a==a1)
+//a1+=","
+////a+=",
+//a.append(",")
+//
+//print(a==a1)
+//
+//for c in a1 {
+//    print(c)
+//}
+
+
+//var str = "holle"
+//print(str)
+//
+//str.insert("!", at: str.endIndex)
+//
+//print(str)
+//
+//str.insert(contentsOf: " nihao", at: str.index(before: str.endIndex))
+//
+//print(str)
+//
+//str.remove(at: str.startIndex)
+//
+//print(str)
+//
+//let range = str.index(str.startIndex, offsetBy: 1) ... str.index(str.endIndex, offsetBy: -6)
+//str.removeSubrange(range)
+//print(str)
+
+
+
+//var str = "holle, world"
+//let index = str.firstIndex(of: ",") ?? str.endIndex
+//var beginng = str[..<index]
+//
+//beginng.append("1")
+//print(str)
+//
+//var d = String(beginng)
+//d.append("2")
+//print(d)
+//
+//print(d.hasPrefix("ho"))
+//print(str.hasPrefix(d))
+//print(d == beginng)
+//print(d.hasSuffix("12"))
+
+//var a = 1
+//var b = 1
+//if a == b {
+//    print("to do")
+//}
+
+//func addTwo(a: Int?, b: Int?) -> Int{
+//    return (a ?? 0) + (b ?? 0)
+//}
+//
+//print(addTwo(a: nil, b: nil))
+//
+//let reage = 0..<10
+//
+//
+//for i in reage.reversed() {
+//    print(i)
+//}
+
+let str:String = "hi, do you how"
+let range = "a"..."z"
+for c in str{
+    if !range.contains(String(c)) {
+        print(c)
+    }
+}
 
 
 
