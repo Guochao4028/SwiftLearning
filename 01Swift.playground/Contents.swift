@@ -198,13 +198,76 @@ import Foundation
 //    print(i)
 //}
 
-let str:String = "hi, do you how"
-let range = "a"..."z"
-for c in str{
-    if !range.contains(String(c)) {
-        print(c)
+//let str:String = "hi, do you how"
+//let range = "a"..."z"
+//for c in str{
+//    if !range.contains(String(c)) {
+//        print(c)
+//    }
+//}
+
+//let a:Array = Array(repeating: "", count: 5)
+//print(a)
+
+//let a:Array = Array(0...9)
+//print(a)
+
+
+//let a = ["sfe":1, "qwe":2]
+//print(a.keys)
+//
+//var names: Array<Any> = Array(a.keys)
+//print(names)
+//
+//names = ["a", "b", "c"]
+//print(names)
+//
+//names = [1,2,3]
+//print(names)
+
+//let  a = Array(0...9)
+//print(a)
+//for value in a {
+//    print(value * 10)
+//}
+//
+//a.forEach { (value) in
+//    print(value)
+//}
+
+//for (index, value) in a.enumerated() {
+//    print("index : \(index) valus:\(value)")
+//}
+//
+//for i in 0 ..< a.count{
+//    print(i)
+//    print(a[i])
+//
+//}
+
+//var it = a.makeIterator()
+//while let num = it.next() {
+//    print(num)
+//}
+//let a = Array(0 ... 9)
+//for i in a.indices{
+//    print(i)
+//}
+
+let kes: [String?] = ["sf", nil]
+//过滤空值
+let valus = kes.compactMap { $0}
+for key in kes {
+    if let a = key {
+        print(a)
     }
+    print("nil")
 }
+
+for v in valus {
+    print(v)
+}
+
 
 
 
