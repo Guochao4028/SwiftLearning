@@ -254,19 +254,19 @@ import Foundation
 //    print(i)
 //}
 
-let kes: [String?] = ["sf", nil]
-//过滤空值
-let valus = kes.compactMap { $0}
-for key in kes {
-    if let a = key {
-        print(a)
-    }
-    print("nil")
-}
-
-for v in valus {
-    print(v)
-}
+//let kes: [String?] = ["sf", nil]
+////过滤空值
+//let valus = kes.compactMap { $0}
+//for key in kes {
+//    if let a = key {
+//        print(a)
+//    }
+//    print("nil")
+//}
+//
+//for v in valus {
+//    print(v)
+//}
 
 
 
