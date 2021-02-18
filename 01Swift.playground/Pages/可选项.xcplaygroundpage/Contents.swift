@@ -76,12 +76,12 @@
 //if b == c {
 //    print("b == c")
 //}
-
-var a: Int? = nil
-var b: Int?? = a
-var c: Int?? = nil
-
-print(b == c)
+//
+//var a: Int? = nil
+//var b: Int?? = a
+//var c: Int?? = nil
+//
+//print(b == c)
 
 
 
