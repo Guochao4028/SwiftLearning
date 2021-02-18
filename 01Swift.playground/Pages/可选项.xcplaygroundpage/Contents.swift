@@ -7,3 +7,18 @@
 //}
 // 空合并运算符 ？？
 // a??b  返回类型取决于b
+
+let a: Int? = nil
+let b: Int? = 4
+
+if let c = a ?? b {   //类似于 if a != nil || b != nil
+    print(c)
+}
+
+if let c = a , let d = b {   //类似于 if a != nil && b != nil
+    print(c)
+    print(d)
+}
+
+
+
