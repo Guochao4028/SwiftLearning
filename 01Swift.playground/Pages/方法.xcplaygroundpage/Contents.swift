@@ -96,27 +96,27 @@
 //
 //var s = Size(s: 1)
 
-class Size{
-    var width: Int
-    var heigth : Int
-    
-    init(width: Int, heigth: Int) {
-        self.width = width
-        self.heigth = heigth
-    }
-    
-    convenience init(width: Int) {
-        self.init(width: width, heigth: 0)
-    }
-    
-    convenience init(heigth: Int) {
-        self.init(width: 0, heigth: heigth)
-    }
-    
-    convenience init() {
-        self.init(width: 0, heigth: 0)
-    }
-}
-
-var s = Size()
+//class Size{
+//    var width: Int
+//    var heigth : Int
+//    
+//    init(width: Int, heigth: Int) {
+//        self.width = width
+//        self.heigth = heigth
+//    }
+//    
+//    convenience init(width: Int) {
+//        self.init(width: width, heigth: 0)
+//    }
+//    
+//    convenience init(heigth: Int) {
+//        self.init(width: 0, heigth: heigth)
+//    }
+//    
+//    convenience init() {
+//        self.init(width: 0, heigth: 0)
+//    }
+//}
+//
+//var s = Size()
 
