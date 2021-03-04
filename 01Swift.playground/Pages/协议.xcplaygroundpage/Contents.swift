@@ -42,15 +42,41 @@
 //}
 
 
-class Person{
-    
-}
+//class Person{
+//
+//}
+//
+//var p = Person()
+//
+//print(p.self)//__lldb_expr_22.Person
+//
+//print(Person.self)//Person
+//
+//var p_type: Person.Type = Person.self
+//print(p_type)//Person
 
-var p = Person()
 
-print(p.self)//__lldb_expr_22.Person
+//func testTry(a: Int, b: Int) throws ->(Int){
+//    
+//    return a / b
+//}
+//
+//func close(_ a:Int) -> Int{
+//    print(">>>>>>>>>\(a)")
+//    return a
+//}
+//
+//
+//defer {
+//    close(0)
+//}
+//
+//do{
+//    try testTry(a: 10, b:3)
+//}catch{
+//    print("catch")
+//}
 
-print(Person.self)//Person
 
-var p_type: Person.Type = Person.self
-print(p_type)//Person
+
+
