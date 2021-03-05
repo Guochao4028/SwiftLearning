@@ -12,5 +12,6 @@
         <page name='方法'/>
         <page name='协议'/>
         <page name='泛型'/>
+        <page name='扩展'/>
     </pages>
 </playground>
