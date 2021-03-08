@@ -74,5 +74,17 @@
 // 结构体与类本质区别
 // 1. 结构体 值类型，类 引用类型
 
- 
+// @escaping
+
+var gFn: (()->())?
+
+func test(_ fn:@escaping ()->()){
+    gFn = fn
+}
+
+
+
+test {
+    print(1)
+}
 
