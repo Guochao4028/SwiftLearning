@@ -16,5 +16,6 @@
         <page name='内存管理'/>
         <page name='字面量'/>
         <page name='OC'/>
+        <page name='GCD'/>
     </pages>
 </playground>
