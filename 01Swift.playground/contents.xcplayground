@@ -17,5 +17,6 @@
         <page name='字面量'/>
         <page name='OC'/>
         <page name='GCD'/>
+        <page name='函数式编程'/>
     </pages>
 </playground>
