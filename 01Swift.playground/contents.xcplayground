@@ -18,5 +18,6 @@
         <page name='OC'/>
         <page name='GCD'/>
         <page name='函数式编程'/>
+        <page name='Rx'/>
     </pages>
 </playground>

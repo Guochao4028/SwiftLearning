@@ -59,42 +59,63 @@ import Foundation
 //    v1 / v2
 //}
 //
-let num = 1
-//print(chu(yu(jian(cheng(jia(num, 3), 5), 1), 10), 2))
-
-typealias FN = (Int) -> Int
-
-func jia(_ v: Int) -> (Int) -> Int{ {$0 + v} }
-func cheng(_ v: Int) -> (Int) -> Int{ {$0 * v} }
-func jian(_ v: Int) -> (Int) -> Int{ {$0 - v} }
-func yu(_ v: Int) -> (Int) -> Int{ {$0 % v} }
-func chu(_ v: Int) -> (Int) -> Int{ {$0 / v} }
+//let num = 1
+////print(chu(yu(jian(cheng(jia(num, 3), 5), 1), 10), 2))
 //
-let fun1 = jia(3)
-let fun2 = cheng(5)
-let fun3 = jian(1)
-let fun4 = yu(10)
-let fun5 = chu(2)
+//typealias FN = (Int) -> Int
 //
-//print(fun5(fun4(fun3(fun2(fun1(num))))))
+//func jia(_ v: Int) -> (Int) -> Int{ {$0 + v} }
+//func cheng(_ v: Int) -> (Int) -> Int{ {$0 * v} }
+//func jian(_ v: Int) -> (Int) -> Int{ {$0 - v} }
+//func yu(_ v: Int) -> (Int) -> Int{ {$0 % v} }
+//func chu(_ v: Int) -> (Int) -> Int{ {$0 / v} }
+////
+//let fun1 = jia(3)
+//let fun2 = cheng(5)
+//let fun3 = jian(1)
+//let fun4 = yu(10)
+//let fun5 = chu(2)
+////
+////print(fun5(fun4(fun3(fun2(fun1(num))))))
+//
+//
+//infix operator >> : AdditionPrecedence
+//
+////B 是中间过程， A是入口，C 是结果
+//func >> <A, B, C> (_ f1: @escaping (A) -> B,
+//                   _ f2: @escaping (B) -> C )
+//                    -> (A) -> C {
+//    {
+//        return f2(f1($0))
+//    }
+//}
+//
+//let fn = fun1 >> fun2 >> fun3 >> fun4 >> fun5
+//print(fn(num))
 
+/// currying
 
-infix operator >> : AdditionPrecedence
+//func add1(_ v1: Int, _ v2: Int) -> Int {v1 + v2 }
+//
+//func add1C(_ v1: Int) -> (Int) -> Int{
+//    {
+//        $0 + v1
+//    }
+//}
+//
+//
+//func add2(_ v1: Int, _ v2: Int, _ v3: Int) -> Int{ v1 + v2 + v3 }
+//
+//func add2C(_ v1 : Int) ->  (Int) -> (Int) -> Int {
+//   return { a in
+//        return{ b in
+//            b + a + v1
+//        }
+//    }
+//}
+ 
 
-//B 是中间过程， A是入口，C 是结果
-func >> <A, B, C> (_ f1: @escaping (A) -> B,
-                   _ f2: @escaping (B) -> C )
-                    -> (A) -> C {
-    {
-        return f2(f1($0))
-    }
-}
-
-let fn = fun1 >> fun2 >> fun3 >> fun4 >> fun5
-print(fn(num))
-
-
-
+func currying <A, B, C> (_ fn:@escaping(A, B) -> C) -> (B) -> (A) -> C{ { b in { a in  fn(a, b)}} }
 
 
 
