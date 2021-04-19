@@ -16,6 +16,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    
+    
+}
+
+-(UIImage *)gc:(UIView *)view{
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 
